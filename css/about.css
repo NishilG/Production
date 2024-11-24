@@ -1,0 +1,19 @@
+
+.home-text h1 {
+     width: 100%;
+}
+
+.home{
+    
+    height: 100vh;
+    display: grid;
+    
+    
+}
+
+#aboutustext{
+    font-size: 1.4rem;
+}
+footer{
+    width: 100vw;
+}
