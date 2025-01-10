@@ -523,6 +523,8 @@ When asked about products, you must always include:
 - Price
 - Link to Purchase
 
+give me the all link in this format "<a href="link"> Click here</a>"
+
 If you cannot provide the requested details, respond with:
 Apologies, I do not have that information. Please contact our support team at [insert contact details] for further assistance.
 
@@ -640,7 +642,7 @@ async function fetchStreamResponseFromGroqAPI(userMessage, aiResponseLi) {
                     accumulatedResponse += deltaContent;
 
                     // Update the AI response placeholder dynamically
-                    aiResponseLi.querySelector("p").textContent = accumulatedResponse.trim();
+                    aiResponseLi.querySelector("p").innerHTML = accumulatedResponse.trim();
                     chatbox.scrollTo(0, chatbox.scrollHeight);
                 }
             } catch (err) {
