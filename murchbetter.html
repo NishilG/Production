@@ -281,10 +281,12 @@ body {
 
 <script>
 const chatbotToggler = document.querySelector(".chatbot-toggler");
+const closeBtn = document.querySelector(".close-btn");
 const chatbox = document.querySelector(".chatbox");
 const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
-const chatbotHeader = document.querySelector(".chatbot header");
+
+const inputInitHeight = chatInput.scrollHeight;
 
 // Add click handler for mobile close button
 chatbotHeader.addEventListener("click", (e) => {
@@ -653,7 +655,6 @@ async function fetchStreamResponseFromGroqAPI(userMessage, aiResponseLi) {
     }
 }
 
-
 chatInput.addEventListener("input", () => {
     chatInput.style.height = `${inputInitHeight}px`;
     chatInput.style.height = `${chatInput.scrollHeight}px`;
@@ -668,6 +669,7 @@ chatInput.addEventListener("keydown", (e) => {
 
 sendChatBtn.addEventListener("click", handleChat);
 chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
 
 
 </script>
